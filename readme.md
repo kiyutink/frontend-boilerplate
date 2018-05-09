@@ -6,8 +6,8 @@
 4. sass
 
 ## Needs implementation (planned as of now):
-1. extract text
-2. hot reload for components (maybe)
-3. eslint 
-4. build
-5. boilerplate react + redux + router 
+- eslint 
+- build (extract css, uglify js and css)
+- boilerplate react + redux + router configuration
+- hot reload for components (maybe)
+- maybe make a CLI
