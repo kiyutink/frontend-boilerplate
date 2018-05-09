@@ -1,13 +1,16 @@
 # Frontend-boilerplate
 ## Already implemented: 
-1. webpack-dev-server 
-2. react redux and routing
-3. babel with presets
-4. sass
+- webpack-dev-server 
+- react redux and routing
+- babel with presets
+- sass
 
 ## Needs implementation (planned as of now):
 - eslint 
-- build (extract css, uglify js and css)
-- boilerplate react + redux + router configuration
+  - es6 rules
+  - react plugin rules
+- boilerplate react + redux + router configuration  
+- build (extract css, uglify js and css, lint)
 - hot reload for components (maybe)
 - maybe make a CLI
+- separate vendor bundle

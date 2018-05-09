@@ -9,6 +9,6 @@ export class App extends React.Component {
         hello there 13
       </span>
       <br/>
-    </div>
+    </div>;
   }
 }
