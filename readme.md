@@ -6,11 +6,10 @@
 - sass
 
 ## Needs implementation (planned as of now):
-- eslint 
-  - es6 rules
+- eslint
   - react plugin rules
 - boilerplate react + redux + router configuration  
-- build (extract css, uglify js and css, lint)
+- build (extract css, uglify js and css, lint, postcss)
 - hot reload for components (maybe)
 - maybe make a CLI
 - separate vendor bundle
