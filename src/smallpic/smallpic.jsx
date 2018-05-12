@@ -9,8 +9,8 @@ export class SmallPic extends React.Component {
       </div>
     );
   }
-}
 
-SmallPic.propTypes = {
-  name: PropTypes.string.isRequired
-};
+  static propTypes = {
+    name: PropTypes.string.isRequired
+  };
+}
