@@ -8,7 +8,6 @@ console.log(a);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-
 switch (a) {
   case 2:
   case 3:
@@ -22,11 +21,3 @@ switch (a) {
 if (a) {
   console.log(3);
 }
-
-function asdf(a) {
-  if (a) {
-    return 2;
-  }
-}
-
-asdf();

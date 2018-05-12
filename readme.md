@@ -4,10 +4,9 @@
 - react redux and routing
 - babel with presets
 - sass
+- eslint
 
 ## Needs implementation (planned as of now):
-- eslint
-  - react plugin rules
 - boilerplate react + redux + router configuration  
 - build (extract css, uglify js and css, lint, postcss)
 - hot reload for components (maybe)
