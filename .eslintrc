@@ -4,12 +4,17 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "plugins": [
+    "babel"
+  ],
   "env": {
       "browser": true
   },  
   "rules": {
     "no-console": "off",
-    "no-extra-parens": "error",
+    "no-extra-parens": ["error", "all", {
+      "ignoreJSX": "multi-line"
+    }],
     "curly": ["error", "all"],
     "dot-location": ["error", "property"],
     "dot-notation": "error",
@@ -22,7 +27,7 @@
     "no-floating-decimal": "error",
     "no-implied-eval": "error",
     "no-implicit-globals": "error",
-    "no-invalid-this": "error",
+    "babel/no-invalid-this": "error",
     "no-labels": "error",
     "no-iterator": "error",
     "no-lone-blocks": "error",
@@ -80,7 +85,9 @@
     "lines-between-class-members": ["error", "always", {
       "exceptAfterSingleLine": true 
     }],
-    "max-len": "error",
+    "max-len": ["error", {
+      "code": 100
+    }],
     "max-lines": ["error", {
       "skipBlankLines": true,
       "skipComments": true,
