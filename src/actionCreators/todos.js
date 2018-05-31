@@ -3,7 +3,7 @@ import {TOGGLE_TODO, ADD_TODO, DELETE_TODO} from '../constants/actionTypes';
 export const addTodo = name => ({
   type: ADD_TODO,
   name,
-  id: +String(Math.random()).replace('.', '')
+  id: `${Math.random()}`.replace('.', '')
 });
 
 export const toggleTodo = id => ({

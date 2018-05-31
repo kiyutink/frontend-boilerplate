@@ -10,10 +10,6 @@ export class TodoList extends React.Component {
     onDeleteTodo: PropTypes.func.isRequired
   }
 
-  static defaultProps = {
-    onTodoClick: null
-  }
-
   render() {
     return (
       <div>
