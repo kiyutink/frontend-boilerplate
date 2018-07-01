@@ -9,6 +9,7 @@ import {
 import {combineReducers} from 'redux';
 import {all, complete, incomplete} from '../constants/todoFilterValues';
 import omit from 'lodash/omit';
+import uniq from 'lodash/uniq';
 
 
 const byId = (state = {}, action) => {
@@ -16,7 +17,7 @@ const byId = (state = {}, action) => {
     case RECEIVE_TODOS: {
       const newState = {...state};
       for (const todo of action.response) {
-        newState[todo.id] = todo;
+        newState[+todo.id] = todo;
       }
       return newState;
     }
@@ -41,10 +42,10 @@ const byId = (state = {}, action) => {
 const allIds = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_TODOS:
-      return [
+      return uniq([
         ...state,
         ...action.response.map(td => td.id)
-      ];
+      ]);
     case ADD_TODO:
       return [...state, action.id];
     case DELETE_TODO:
