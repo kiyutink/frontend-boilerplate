@@ -7,7 +7,8 @@ export class TodoList extends React.Component {
   static propTypes = {
     todos: PropTypes.arrayOf(PropTypes.object).isRequired,
     onTodoClick: PropTypes.func.isRequired,
-    onDeleteTodo: PropTypes.func.isRequired
+    onDeleteTodo: PropTypes.func.isRequired,
+    onRenameTodo: PropTypes.func.isRequired
   }
 
   render() {
@@ -22,6 +23,7 @@ export class TodoList extends React.Component {
               isCompleted={t.isCompleted}
               onClick={this.props.onTodoClick}
               onDelete={this.props.onDeleteTodo}
+              onRename={this.props.onRenameTodo}
             />
           ))
         }

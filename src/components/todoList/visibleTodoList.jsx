@@ -1,32 +1,47 @@
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import {TodoList} from './todoList';
 import {connect} from 'react-redux';
-import {toggleTodo, deleteTodo} from '../../actionCreators/todos';
+import {toggleTodo, deleteTodo, renameTodo, fetchTodos} from '../../actionCreators/todos';
+import {withRouter} from 'react-router';
+import {getVisibleTodos} from '../../configureStore';
+import {all} from '../../constants/todoFilterValues';
 
-const getVisibleTodos = (todos, filter) => {
-  switch (filter) {
-    case 'SHOW_ALL':
-      return todos;
-    case 'SHOW_COMPLETED':
-      return todos.filter(t => t.isCompleted);
-    case 'SHOW_INCOMPLETE':
-      return todos.filter(t => !t.isCompleted);
-    default:
-      return todos;
-  }
+const mapStateToProps = (state, ownProps) => ({
+  todos: getVisibleTodos(state, ownProps.match.params.filter),
+  filter: ownProps.match.params.filter || all
+});
+
+const mapDispatchToProps = {
+  onTodoClick: toggleTodo,
+  onDeleteTodo: deleteTodo,
+  onRenameTodo: renameTodo,
+  fetchTodos
 };
 
-const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos, state.visibility)
-});
+class VisibleTodoList extends React.Component {
+  static propTypes = {
+    filter: PropTypes.string,
+    fetchTodos: PropTypes.func
+  }
 
-const mapDispatchToProps = dispatch => ({
-  onTodoClick: id => dispatch(
-    toggleTodo(id)
-  ),
+  componentDidMount() {
+    this.props.fetchTodos(this.props.filter);
+  }
 
-  onDeleteTodo: id => dispatch(
-    deleteTodo(id)
-  )
-});
+  componentDidUpdate(prevProps) {
+    if (this.props.filter !== prevProps.filter) {
+      this.props.fetchTodos(this.props.filter);
+    }
+  }
 
-export const VisibleTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList);
+  render() {
+    return <TodoList {...this.props} />;
+  }
+}
+
+VisibleTodoList = withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(VisibleTodoList)
+);
+
+export {VisibleTodoList};

@@ -22,7 +22,7 @@ class AddTodoComponent extends React.Component {
   }
 
 
-  handleAddTodo = () => {
+  addTodo = () => {
     if (!this.state.newTodoName) {
       return;
     }
@@ -34,6 +34,12 @@ class AddTodoComponent extends React.Component {
     });
   }
 
+  handleKeyDown = e => {
+    if (e.which === 13) {
+      this.addTodo();
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -41,9 +47,10 @@ class AddTodoComponent extends React.Component {
           type='text'
           value={this.state.newTodoName}
           onChange={this.updateNewTodoName}
+          onKeyDown={this.handleKeyDown}
         />
         <button
-          onClick={this.handleAddTodo}
+          onClick={this.addTodo}
         >
           add
         </button>

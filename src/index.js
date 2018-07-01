@@ -9,7 +9,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Route
-        path='/'
+        path='/:filter?'
         component={App}
       />
     </BrowserRouter>
