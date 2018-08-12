@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addTodo} from '../../actionCreators/todos';
+import {addTodo} from '../../actionCreators';
 import PropTypes from 'prop-types';
 
 class AddTodoComponent extends React.Component {

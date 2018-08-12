@@ -5,9 +5,9 @@
 - babel with presets
 - sass
 - eslint
+- boilerplate react + redux + router configuration
 
 ## Needs implementation (planned as of now):
-- boilerplate react + redux + router configuration  
 - build (extract css, uglify js and css, lint, postcss)
 - hot reload for components (maybe)
 - maybe make a CLI

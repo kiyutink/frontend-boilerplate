@@ -98,7 +98,7 @@
     "max-nested-callbacks": ["error", 4],
     "max-params": "error",
     "max-statements": "error",
-    "multiline-ternary": ["error", "never"],
+    "multiline-ternary": ["error", "always-multiline"],
     "new-cap": "error",
     "new-parens": "error",
     "newline-per-chained-call": "error",
@@ -116,7 +116,7 @@
       "allowAllPropertiesOnSameLine": true
     }],
     "one-var": ["error", "never"],
-    "operator-linebreak": ["error", "after"],
+    "operator-linebreak": "error",
     "quote-props": ["error", "consistent-as-needed"],
     "quotes": ["error", "single", {
       "allowTemplateLiterals": true
