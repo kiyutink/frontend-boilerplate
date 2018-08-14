@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {all} from '../../constants/todoFilterValues';
+import './visibilityLink.scss';
 
 
 export const VisibilityLink = ({filter, children}) => (

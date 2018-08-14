@@ -1,5 +1,4 @@
 import React from 'react';
-import './VisibilityFilter.scss';
 import {VisibilityLink} from '../visibilityLink/visibilityLink';
 import {all, complete, incomplete} from '../../constants/todoFilterValues';
 

@@ -6,9 +6,15 @@
 - sass
 - eslint
 - boilerplate react + redux + router configuration
-
-## Needs implementation (planned as of now):
 - build (extract css, uglify js and css, lint, postcss)
+  - extract js
+  - minify js and css
+  - lint before building
+  - autoprefixer
+  - image inlining and optimization
+  - bundle analyzer
+
+## Not implemented yet:
+- separate vendor bundle, codesplitting, chunks config and all that jazz
 - hot reload for components (maybe)
 - maybe make a CLI
-- separate vendor bundle

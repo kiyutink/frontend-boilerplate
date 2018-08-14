@@ -3,22 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  mode: 'development',
-  module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader'
-      ]
-    },
-    {
-      test: [/\.jsx$/, /\.js$/],
-      loader: 'babel-loader',
-      exclude: /node_modules/
-    }]
-  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -32,8 +16,5 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     })
-  ],
-  devServer: {
-    historyApiFallback: true
-  }
-}
+  ]
+};
