@@ -24,7 +24,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
@@ -33,31 +33,26 @@ module.exports = merge(common, {
         ]
       },
       {
-        test: /\.(jpe?g|png|gif)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10 * 1024
-        }
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-url-loader',
-        options: {
-          limit: 10 * 1024
-        }
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/,
-        loader: 'image-webpack-loader',
-        enforce: 'pre'
-      },
-      {
         test: [/\.jsx$/, /\.js$/],
         use: [
           'babel-loader',
           'eslint-loader'
         ],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10 * 1024
+            }
+          },
+          {
+            loader: 'image-webpack-loader'
+          }
+        ]
       }
     ]
   },

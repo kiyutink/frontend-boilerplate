@@ -11,7 +11,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           'style-loader',
           'css-loader',
@@ -22,6 +22,13 @@ module.exports = merge(common, {
         test: [/\.jsx$/, /\.js$/],
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10 * 1024
+        }
       }
     ]
   }

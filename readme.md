@@ -15,6 +15,7 @@
   - bundle analyzer
 
 ## Not implemented yet:
+- auto lint --fix
 - separate vendor bundle, codesplitting, chunks config and all that jazz
 - hot reload for components (maybe)
 - maybe make a CLI
