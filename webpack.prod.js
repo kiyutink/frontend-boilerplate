@@ -34,11 +34,11 @@ module.exports = merge(common, {
       },
       {
         test: [/\.jsx$/, /\.js$/],
+        exclude: /node_modules/,
         use: [
           'babel-loader',
           'eslint-loader'
-        ],
-        exclude: /node_modules/
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
