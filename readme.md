@@ -18,5 +18,4 @@ This repository is used by [this package](https://github.com/kiyutink/bp-cli) as
   - Bundle analyzer
 
 ## Planned:
-- React-hot-loader
 - Precommit hook for linting staged files

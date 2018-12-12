@@ -2,7 +2,7 @@
   "name": "bp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --open --config webpack.dev.js",
@@ -15,7 +15,7 @@
     "classnames": "^2.2.5",
     "lodash": "^4.17.10",
     "normalizr": "^3.2.4",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
