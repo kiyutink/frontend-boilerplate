@@ -1,21 +1,22 @@
 # Frontend-boilerplate
-## Already implemented: 
-- webpack-dev-server 
-- react redux and routing
-- babel with presets
-- sass
-- eslint
-- boilerplate react + redux + router configuration
-- build (extract css, uglify js and css, lint, postcss)
-  - extract js
-  - minify js and css
-  - lint before building
-  - autoprefixer
-  - image inlining and optimization
-  - bundle analyzer
+This repository is used by [this package](https://github.com/kiyutink/bp-cli) as a boilerplate project.
 
-## Not implemented yet:
-- auto lint --fix
-- separate vendor bundle, codesplitting, chunks config and all that jazz
-- hot reload for components (maybe)
-- maybe make a CLI
+## This boilerplate project includes:
+
+- Webpack-dev-server
+- React
+- Redux
+- React Router
+- Babel with presets
+- Sass
+- Eslint
+- A build configuration (extract css, uglify js and css, lint, postcss)
+  - JS and CSS minification
+  - Pre-build lint
+  - Autoprefix CSS
+  - Image optimization
+  - Bundle analyzer
+
+## Planned:
+- React-hot-loader
+- Precommit hook for linting staged files
