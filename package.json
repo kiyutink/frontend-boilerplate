@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --open --config webpack.dev.js",
     "build": "yarn lint && webpack --config webpack.prod.js",
-    "lint": "eslint ./**/*.{js, jsx} --fix",
+    "lint": "eslint \"./**/*.@(js|jsx)\" --fix",
     "precommit-lint": "eslint --fix"
   },
   "author": "Kirill Kiyutin",
