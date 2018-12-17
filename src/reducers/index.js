@@ -9,7 +9,6 @@ const listByFilter = combineReducers({
   complete: createList(complete)
 });
 
-
 export default combineReducers({
   byId,
   listByFilter

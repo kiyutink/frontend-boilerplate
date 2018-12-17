@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = merge(common, {
   mode: 'production',
@@ -35,10 +36,7 @@ module.exports = merge(common, {
       {
         test: [/\.jsx$/, /\.js$/],
         exclude: /node_modules/,
-        use: [
-          'babel-loader',
-          'eslint-loader'
-        ]
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,

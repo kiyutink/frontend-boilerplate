@@ -10,13 +10,13 @@ import {combineReducers} from 'redux';
 import {complete, incomplete} from '../constants/todoFilterValues';
 
 export default filter => {
-
   const handleToggle = (state, action) => {
     const {result: toggledId, entities} = action.response;
     const isCompleted = entities.todos[toggledId].isCompleted;
 
-    const shouldRemove = isCompleted && filter === incomplete ||
-      !isCompleted && filter === complete;
+    const shouldRemove =
+      (isCompleted && filter === incomplete) ||
+      (!isCompleted && filter === complete);
 
     return shouldRemove ? state.filter(id => id !== toggledId) : state;
   };
@@ -24,13 +24,9 @@ export default filter => {
   const ids = (state = [], action) => {
     switch (action.type) {
       case FETCH_TODOS_SUCCESS:
-        return filter === action.filter
-          ? action.response.result
-          : state;
+        return filter === action.filter ? action.response.result : state;
       case ADD_TODO_SUCCESS:
-        return filter === complete
-          ? state
-          : [...state, action.response.result];
+        return filter === complete ? state : [...state, action.response.result];
       case TOGGLE_TODO_SUCCESS:
         return handleToggle(state, action);
       case DELETE_TODO_SUCCESS:
@@ -41,7 +37,6 @@ export default filter => {
   };
 
   const isFetching = (state = false, action) => {
-
     if (action.filter !== filter) {
       return state;
     }

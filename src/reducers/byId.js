@@ -1,7 +1,6 @@
 import {DELETE_TODO_SUCCESS} from '../constants/actionTypes';
 
 export default (state = {}, action) => {
-
   if (action.type === DELETE_TODO_SUCCESS) {
     const newState = {...state};
     delete newState[action.id];
@@ -13,8 +12,7 @@ export default (state = {}, action) => {
       ...state,
       ...action.response.entities.todos
     };
-  }
-  else {
+  } else {
     return state;
   }
 };

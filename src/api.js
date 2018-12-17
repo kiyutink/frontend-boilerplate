@@ -3,21 +3,23 @@ import {all, complete, incomplete} from './constants/todoFilterValues';
 let tries = 0;
 
 export class Api {
-  static allTodos = [{
-    id: '123123',
-    name: 'hey',
-    isCompleted: false
-  },
-  {
-    id: '123121',
-    name: 'ho',
-    isCompleted: false
-  },
-  {
-    id: '123122',
-    name: 'let\'s go',
-    isCompleted: true
-  }];
+  static allTodos = [
+    {
+      id: '123123',
+      name: 'hey',
+      isCompleted: false
+    },
+    {
+      id: '123121',
+      name: 'ho',
+      isCompleted: false
+    },
+    {
+      id: '123122',
+      name: "let's go",
+      isCompleted: true
+    }
+  ];
 
   static fetchTodos(filter) {
     return delay(500).then(() => {
@@ -43,7 +45,8 @@ export class Api {
     return delay(500).then(() => {
       const todo = {
         name,
-        id: Math.random().toFixed(10)
+        id: Math.random()
+          .toFixed(10)
           .split('.')[1],
         isCompleted: false
       };

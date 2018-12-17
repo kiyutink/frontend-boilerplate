@@ -13,26 +13,23 @@ class AddTodoComponent extends React.Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired
-  }
+  };
 
   updateNewTodoName = e => {
     this.setState({
       newTodoName: e.target.value
     });
-  }
-
+  };
 
   addTodo = () => {
     if (!this.state.newTodoName) {
       return;
     }
-    this.props.dispatch(
-      addTodo(this.state.newTodoName)
-    );
+    this.props.dispatch(addTodo(this.state.newTodoName));
     this.setState({
       newTodoName: ''
     });
-  }
+  };
 
   handleKeyDown = e => {
     if (e.which === 13) {
@@ -49,11 +46,7 @@ class AddTodoComponent extends React.Component {
           onChange={this.updateNewTodoName}
           onKeyDown={this.handleKeyDown}
         />
-        <button
-          onClick={this.addTodo}
-        >
-          add
-        </button>
+        <button onClick={this.addTodo}>add</button>
       </React.Fragment>
     );
   }

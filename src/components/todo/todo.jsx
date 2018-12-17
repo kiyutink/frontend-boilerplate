@@ -18,31 +18,28 @@ export class Todo extends React.Component {
     id: PropTypes.string.isRequired,
     onDelete: PropTypes.func.isRequired,
     onRename: PropTypes.func.isRequired
-  }
+  };
 
   handleClick = () => {
     this.props.onClick(this.props.id);
-  }
+  };
 
   handleNewNameChange = e => {
     this.setState({
       newName: e.target.value
     });
-  }
+  };
 
   handleDeleteTodo = () => {
     this.props.onDelete(this.props.id);
-  }
+  };
 
   handleRename = () => {
-    this.props.onRename(
-      this.props.id,
-      this.state.newName
-    );
+    this.props.onRename(this.props.id, this.state.newName);
     this.setState({
       newName: ''
     });
-  }
+  };
 
   handleKeyDown = e => {
     if (e.which === 13) {
@@ -58,22 +55,14 @@ export class Todo extends React.Component {
           this.props.isCompleted && 'todo_completed'
         )}
       >
-        <h5
-          onClick={this.handleClick}
-        >
-          {this.props.name}
-        </h5>
+        <h5 onClick={this.handleClick}>{this.props.name}</h5>
         <input
           type='text'
           value={this.state.newName}
           onChange={this.handleNewNameChange}
           onKeyDown={this.handleKeyDown}
         />
-        <button
-          onClick={this.handleRename}
-        >
-          rename
-        </button>
+        <button onClick={this.handleRename}>rename</button>
         <br />
         <button onClick={this.handleDeleteTodo}>x</button>
       </div>

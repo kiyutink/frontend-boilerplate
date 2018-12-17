@@ -3,14 +3,8 @@ import PropTypes from 'prop-types';
 
 export const FetchError = ({message, onRetry}) => (
   <div>
-    <p>
-      {message}
-    </p>
-    <button
-      onClick={onRetry}
-    >
-      retry
-    </button>
+    <p>{message}</p>
+    <button onClick={onRetry}>retry</button>
   </div>
 );
 

@@ -13,9 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const store = createStore(
   root,
-  composeEnhancers(
-    applyMiddleware(...middlewares)
-  )
+  composeEnhancers(applyMiddleware(...middlewares))
 );
 
 export {store};

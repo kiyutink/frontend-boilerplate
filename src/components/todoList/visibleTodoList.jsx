@@ -34,7 +34,7 @@ class VisibleTodoList extends React.Component {
     isFetching: PropTypes.bool,
     todos: PropTypes.arrayOf(PropTypes.object),
     errorMessage: PropTypes.string
-  }
+  };
 
   fetchData = () => this.props.fetchTodos(this.props.filter);
 
@@ -67,7 +67,10 @@ class VisibleTodoList extends React.Component {
 }
 
 VisibleTodoList = withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(VisibleTodoList)
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(VisibleTodoList)
 );
 
 export {VisibleTodoList};

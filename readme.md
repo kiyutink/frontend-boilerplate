@@ -1,4 +1,5 @@
 # Frontend-boilerplate
+
 This repository is used by [this package](https://github.com/kiyutink/bp-cli) as a boilerplate project.
 
 ## This boilerplate project includes:

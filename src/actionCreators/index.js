@@ -54,18 +54,18 @@ export const fetchTodos = filter => (dispatch, getState) => {
     filter
   });
 
-
-  return Api.fetchTodos(filter)
-    .then(
-      response => dispatch({
+  return Api.fetchTodos(filter).then(
+    response =>
+      dispatch({
         type: FETCH_TODOS_SUCCESS,
         filter,
         response: normalize(response, schema.arrayOfTodos)
       }),
-      err => dispatch({
+    err =>
+      dispatch({
         type: FETCH_TODOS_FAILURE,
         filter,
         message: err.message || 'Oopsie woopsie, fucko boingo'
-      }),
-    );
+      })
+  );
 };
