@@ -11,6 +11,7 @@ This repository is used by [this package](https://github.com/kiyutink/bp-cli) as
 - Babel with presets
 - Sass
 - Eslint
+- Stylelint
 - Prettier
 - Precommit hook for linting and formatting staged files
 - A build configuration (extract css, uglify js and css, lint, postcss)

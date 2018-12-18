@@ -7,9 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --open --config webpack.dev.js",
     "build": "yarn lint && webpack --config webpack.prod.js",
-    "lint": "eslint \"./**/*.@(js|jsx)\" --fix",
+    "lint-js": "eslint \"./**/*.@(js|jsx)\" --fix",
+    "lint-scss": "stylelint \"./**/*.scss\" --fix",
+    "lint": "yarn lint-js && yarn lint-scss",
     "format": "prettier --write */**",
-    "precommit-lint": "eslint --fix",
+    "precommit-lint-js": "eslint --fix",
+    "precommit-lint-scss": "stylelint --fix",
     "precommit-format": "prettier --write"
   },
   "author": "Kirill Kiyutin",
@@ -56,6 +59,9 @@
     "prettier": "^1.15.3",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.4.1",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.8.1",
@@ -67,7 +73,11 @@
   "lint-staged": {
     "./**/*.{js,jsx}": [
       "yarn precommit-format",
-      "yarn precommit-lint",
+      "yarn precommit-lint-js",
+      "git add"
+    ],
+    "./**/*.scss": [
+      "yarn precommit-lint-scss",
       "git add"
     ]
   },
