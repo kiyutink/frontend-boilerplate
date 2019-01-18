@@ -3,5 +3,4 @@ node_modules
 .gitignore
 .eslintignore
 dist/
-yarn.lock
 .vscode
