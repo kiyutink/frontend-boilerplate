@@ -1,6 +1,6 @@
-import React from 'react';
-import {VisibilityLink} from '../visibilityLink/visibilityLink';
-import {all, complete, incomplete} from '../../constants/todoFilterValues';
+import React from "react";
+import { VisibilityLink } from "../visibilityLink/visibilityLink";
+import { all, complete, incomplete } from "../../constants/todoFilterValues";
 
 export class VisibilityFilter extends React.Component {
   render() {

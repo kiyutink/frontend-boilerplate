@@ -5,13 +5,13 @@ import {
   ADD_TODO_SUCCESS,
   TOGGLE_TODO_SUCCESS,
   DELETE_TODO_SUCCESS
-} from '../constants/actionTypes';
-import {combineReducers} from 'redux';
-import {complete, incomplete} from '../constants/todoFilterValues';
+} from "../constants/actionTypes";
+import { combineReducers } from "redux";
+import { complete, incomplete } from "../constants/todoFilterValues";
 
 export default filter => {
   const handleToggle = (state, action) => {
-    const {result: toggledId, entities} = action.response;
+    const { result: toggledId, entities } = action.response;
     const isCompleted = entities.todos[toggledId].isCompleted;
 
     const shouldRemove =
@@ -54,7 +54,7 @@ export default filter => {
     }
   };
 
-  const errorMessage = (state = '', action) => {
+  const errorMessage = (state = "", action) => {
     if (action.filter !== filter) {
       return state;
     }
@@ -65,7 +65,7 @@ export default filter => {
 
       case FETCH_TODOS_REQUEST:
       case FETCH_TODOS_SUCCESS:
-        return '';
+        return "";
 
       default:
         return state;

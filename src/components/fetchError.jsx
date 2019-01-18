@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-export const FetchError = ({message, onRetry}) => (
+export const FetchError = ({ message, onRetry }) => (
   <div>
     <p>{message}</p>
     <button onClick={onRetry}>retry</button>

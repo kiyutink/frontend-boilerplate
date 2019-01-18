@@ -1,27 +1,27 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const merge = require("webpack-merge");
+const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
-  mode: 'development',
+  mode: "development",
   devServer: {
     historyApiFallback: true,
     contentBase: __dirname
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: [/\.jsx$/, /\.js$/],
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        loader: 'url-loader',
+        loader: "url-loader",
         options: {
           limit: 10 * 1024
         }

@@ -6,11 +6,11 @@ import {
   FETCH_TODOS_FAILURE,
   FETCH_TODOS_REQUEST,
   DELETE_TODO_SUCCESS
-} from '../constants/actionTypes';
-import {Api} from '../api';
-import {getIsFetching} from '../reducers';
-import {normalize} from 'normalizr';
-import * as schema from './schema';
+} from "../constants/actionTypes";
+import { Api } from "../api";
+import { getIsFetching } from "../reducers";
+import { normalize } from "normalizr";
+import * as schema from "./schema";
 
 export const addTodo = name => dispatch =>
   Api.addTodo(name).then(response => {
@@ -65,7 +65,7 @@ export const fetchTodos = filter => (dispatch, getState) => {
       dispatch({
         type: FETCH_TODOS_FAILURE,
         filter,
-        message: err.message || 'Oopsie woopsie, fucko boingo'
+        message: err.message || "Oopsie woopsie, fucko boingo"
       })
   );
 };

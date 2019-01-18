@@ -1,21 +1,21 @@
-import {all, complete, incomplete} from './constants/todoFilterValues';
+import { all, complete, incomplete } from "./constants/todoFilterValues";
 
 let tries = 0;
 
 export class Api {
   static allTodos = [
     {
-      id: '123123',
-      name: 'hey',
+      id: "123123",
+      name: "hey",
       isCompleted: false
     },
     {
-      id: '123121',
-      name: 'ho',
+      id: "123121",
+      name: "ho",
       isCompleted: false
     },
     {
-      id: '123122',
+      id: "123122",
       name: "let's go",
       isCompleted: true
     }
@@ -25,7 +25,7 @@ export class Api {
     return delay(500).then(() => {
       if (tries < 3 && Math.random() > 0.95) {
         tries++;
-        throw new Error('Error');
+        throw new Error("Error");
       }
 
       switch (filter) {
@@ -47,7 +47,7 @@ export class Api {
         name,
         id: Math.random()
           .toFixed(10)
-          .split('.')[1],
+          .split(".")[1],
         isCompleted: false
       };
       this.allTodos.push(todo);

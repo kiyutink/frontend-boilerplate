@@ -1,14 +1,14 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
-import PropTypes from 'prop-types';
-import {all} from '../../constants/todoFilterValues';
-import './visibilityLink.scss';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
+import { all } from "../../constants/todoFilterValues";
+import "./visibilityLink.scss";
 
-export const VisibilityLink = ({filter, children}) => (
+export const VisibilityLink = ({ filter, children }) => (
   <NavLink
     exact={true}
-    to={`/${filter === all ? '' : filter}`}
-    activeClassName='option_active'
+    to={`/${filter === all ? "" : filter}`}
+    activeClassName="option_active"
   >
     {children}
   </NavLink>

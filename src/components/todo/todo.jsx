@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import './todo.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import "./todo.scss";
 
 export class Todo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      newName: ''
+      newName: ""
     };
   }
 
@@ -37,7 +37,7 @@ export class Todo extends React.Component {
   handleRename = () => {
     this.props.onRename(this.props.id, this.state.newName);
     this.setState({
-      newName: ''
+      newName: ""
     });
   };
 
@@ -51,13 +51,13 @@ export class Todo extends React.Component {
     return (
       <div
         className={classNames(
-          'todo',
-          this.props.isCompleted && 'todo_completed'
+          "todo",
+          this.props.isCompleted && "todo_completed"
         )}
       >
         <h5 onClick={this.handleClick}>{this.props.name}</h5>
         <input
-          type='text'
+          type="text"
           value={this.state.newName}
           onChange={this.handleNewNameChange}
           onKeyDown={this.handleKeyDown}

@@ -1,13 +1,13 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {addTodo} from '../../actionCreators';
-import PropTypes from 'prop-types';
+import React from "react";
+import { connect } from "react-redux";
+import { addTodo } from "../../actionCreators";
+import PropTypes from "prop-types";
 
 class AddTodoComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      newTodoName: ''
+      newTodoName: ""
     };
   }
 
@@ -27,7 +27,7 @@ class AddTodoComponent extends React.Component {
     }
     this.props.dispatch(addTodo(this.state.newTodoName));
     this.setState({
-      newTodoName: ''
+      newTodoName: ""
     });
   };
 
@@ -41,7 +41,7 @@ class AddTodoComponent extends React.Component {
     return (
       <React.Fragment>
         <input
-          type='text'
+          type="text"
           value={this.state.newTodoName}
           onChange={this.updateNewTodoName}
           onKeyDown={this.handleKeyDown}

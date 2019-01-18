@@ -1,17 +1,21 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import {TodoList} from './todoList';
-import {connect} from 'react-redux';
+import * as React from "react";
+import PropTypes from "prop-types";
+import { TodoList } from "./todoList";
+import { connect } from "react-redux";
 import {
   toggleTodo,
   deleteTodo,
   renameTodo,
   fetchTodos
-} from '../../actionCreators';
-import {withRouter} from 'react-router';
-import {getVisibleTodos, getIsFetching, getErrorMessage} from '../../reducers';
-import {all} from '../../constants/todoFilterValues';
-import {FetchError} from '../fetchError';
+} from "../../actionCreators";
+import { withRouter } from "react-router";
+import {
+  getVisibleTodos,
+  getIsFetching,
+  getErrorMessage
+} from "../../reducers";
+import { all } from "../../constants/todoFilterValues";
+import { FetchError } from "../fetchError";
 
 const mapStateToProps = (state, ownProps) => ({
   todos: getVisibleTodos(state, ownProps.match.params.filter || all),
@@ -73,4 +77,4 @@ VisibleTodoList = withRouter(
   )(VisibleTodoList)
 );
 
-export {VisibleTodoList};
+export { VisibleTodoList };

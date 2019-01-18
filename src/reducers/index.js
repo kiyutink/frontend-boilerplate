@@ -1,7 +1,7 @@
-import {combineReducers} from 'redux';
-import {all, complete, incomplete} from '../constants/todoFilterValues';
-import byId, * as fromById from './byId';
-import createList, * as fromList from './createList';
+import { combineReducers } from "redux";
+import { all, complete, incomplete } from "../constants/todoFilterValues";
+import byId, * as fromById from "./byId";
+import createList, * as fromList from "./createList";
 
 const listByFilter = combineReducers({
   all: createList(all),
