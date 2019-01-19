@@ -19,6 +19,7 @@
   "author": "Kirill Kiyutin",
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "classnames": "^2.2.5",
     "lodash": "^4.17.10",
     "normalizr": "^3.2.4",
@@ -86,5 +87,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "browserslist": ">0.5% and last 2 version and not ie 10 and not op_mini all and not and_uc 1-100"
 }
