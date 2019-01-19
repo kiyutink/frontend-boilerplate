@@ -1,3 +1,14 @@
 {
-  "liveServer.settings.root": "/dist/"
+  "liveServer.settings.root": "/dist/",
+  "launch": {
+    "configurations": [
+      {
+        "name": "Launch localhost",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}"
+      }
+    ]
+  }
 }
