@@ -50,17 +50,17 @@
     "no-undef-init": "error",
     "no-use-before-define": [
       "error",
-      {"functions": false, "classes": false, "variables": true}
+      { "functions": false, "classes": false, "variables": true }
     ],
     "func-name-matching": ["error", "always"],
     "lines-between-class-members": [
       "error",
       "always",
-      {"exceptAfterSingleLine": true}
+      { "exceptAfterSingleLine": true }
     ],
     "max-lines": [
       "error",
-      {"skipBlankLines": true, "skipComments": true, "max": 750}
+      { "skipBlankLines": true, "skipComments": true, "max": 750 }
     ],
     "max-nested-callbacks": ["error", 4],
     "max-params": "error",
@@ -104,9 +104,9 @@
     ],
     "react/jsx-curly-brace-presence": [
       "error",
-      {"props": "never", "children": "never"}
+      { "props": "never", "children": "never" }
     ],
     "react/jsx-pascal-case": "error",
-    "react/jsx-filename-extension": ["error", {"extensions": [".jsx"]}]
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx"] }]
   }
 }
