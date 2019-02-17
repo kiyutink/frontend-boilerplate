@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
-  "plugins": ["babel", "prettier"],
+  "plugins": ["babel", "prettier", "react-hooks"],
   "settings": {
     "react": {
       "version": "detect"
@@ -107,6 +107,7 @@
       { "props": "never", "children": "never" }
     ],
     "react/jsx-pascal-case": "error",
-    "react/jsx-filename-extension": ["error", { "extensions": [".jsx"] }]
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx"] }],
+    "react-hooks/rules-of-hooks": "error"
   }
 }
