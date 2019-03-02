@@ -3,11 +3,11 @@ import "./app.scss";
 import { VisibleTodoList } from "../todoList/visibleTodoList";
 import { AddTodo } from "../addTodo/addTodo";
 import { VisibilityFilter } from "../visibilityFilter/visibilityFilter";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 
 export class App extends React.Component {
   static propTypes = {
-    match: PropsTypes.object
+    match: PropTypes.object
   };
 
   render() {
