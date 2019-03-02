@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "target": "esnext"
   },
   "exclude": ["dist", "node_modules", "**/node_modules/*"]
 }

@@ -20,3 +20,8 @@ This repository is used by [this package](https://github.com/kiyutink/bp-cli) as
   - Autoprefix CSS
   - Image optimization
   - Bundle analyzer
+
+Todo:
+  - Remove basic project and some dependencies connected with it
+  - Change the cli to not use git
+

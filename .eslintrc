@@ -10,7 +10,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "prettier/prettier": "error",
@@ -64,7 +65,7 @@
     ],
     "max-nested-callbacks": ["error", 4],
     "max-params": "error",
-    "max-statements": "error",
+    "max-statements": ["error", 50],
     "new-cap": "error",
     "no-multi-assign": "error",
     "no-nested-ternary": "error",
@@ -107,7 +108,7 @@
       { "props": "never", "children": "never" }
     ],
     "react/jsx-pascal-case": "error",
-    "react/jsx-filename-extension": ["error", { "extensions": [".jsx"] }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".test.js"] }],
     "react-hooks/rules-of-hooks": "error"
   }
 }
